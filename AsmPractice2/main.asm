@@ -27,8 +27,16 @@ mov ebx, myValue_2			;ebx = 2000h
 ADD eax, ebx				;eax = 3000h
 SUB eax, ebx				;eax = 1000h
 
+mov ecx, myValue_3			;ecx = 3000h
+ADD ebx, ecx				;ebx = 5000h
+SUB ebx, ecx				;ebx = 2000h
 
-	invoke ExitProcess, 0
+mov edx, myValue_4			;edx = 4000h
+ADD ebx, edx				;ebx = 6000h
+SUB ebx, edx				;ebx = 4000h
+
+
+invoke ExitProcess, 0
 
 main endp 
 
