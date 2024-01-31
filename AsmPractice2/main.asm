@@ -1,6 +1,6 @@
 ;Tanner Bebb
 ;Assembly language practice
-;Unsure of the current goal.
+;Practicing using the addition and subtraction commands.
 
 includelib irvine32.lib
 .386
@@ -10,14 +10,18 @@ ExitProcess proto, dwExitCode:dword
 
 .data
 
+myValue WORD 1000h		;H is for the hexadecimal notation.
+
 .code
 
 main proc
 
+inc myValue				;myValue = 1001h
+mov bx, myValue			;This will store myValue in the bx register.
+dec bx					;bx = 1000h
+
 	invoke ExitProcess, 0
 
-;The main endp is like the closing parenthesis on a c++ function.
 main endp 
 
-;I am pretty sure that this statement ends the whole program.
 end main
